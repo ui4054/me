@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic CV Light - Miguel Martínez</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        quantum: { 500: '#3b82f6', 600: '#2563eb', 900: '#1e3a8a' },
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f9fafb;
+            color: #1f2937;
+        }
+
+        .bento-card {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 1rem;
+            padding: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .bento-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1), 0 4px 6px -2px rgba(59, 130, 246, 0.05);
+            border-color: #bfdbfe;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #2563eb, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media print {
+            body {
+                background-color: #ffffff !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                zoom: 0.90;
+            }
+
+            .bento-card {
+                break-inside: avoid;
+                border: 1px solid #e5e7eb !important;
+                box-shadow: none !important;
+                padding: 0.85rem !important;
+            }
+
+            @page {
+                margin: 0.8cm;
+                size: A4;
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased font-sans p-4 md:p-6 max-w-6xl mx-auto relative z-0">
+
+    <!-- Header Section -->
+    <header
+        class="relative z-0 overflow-hidden p-6 md:p-8 rounded-3xl bg-gradient-to-r from-blue-50/50 via-slate-50/50 to-purple-50/30 border border-blue-100/80 shadow-sm flex flex-col md:flex-row print:flex-row justify-between items-start md:items-center print:items-center mb-6 gap-4">
+
+        <!-- 3D Watermark Background in Header -->
+        <div
+            class="absolute inset-0 z-[-1] pointer-events-none opacity-25 print:opacity-20 mix-blend-multiply flex items-center justify-center select-none overflow-hidden">
+            <img src="watermark_3d.png" alt="" class="w-full h-full object-cover">
+        </div>
+
+        <div class="flex-1 relative z-10">
+            <h1
+                class="text-[1.9rem] md:text-[2.125rem] md:leading-tight font-extrabold tracking-tight text-gray-800 mb-1">
+                MIGUEL A. MARTÍNEZ B.
+            </h1>
+            <h2 class="text-[0.95rem] md:text-[1.06rem] font-semibold text-blue-600 mb-3">Quantum Software | Data
+                Engineer | Research Professor </h2>
+
+            <div class="flex flex-wrap gap-3 text-[11px] text-gray-700 font-medium">
+                <span class="flex items-center gap-1"><i class="fa-solid fa-location-dot"></i> Ibagué, Colombia</span>
+                <span class="flex items-center gap-1"><i class="fa-solid fa-phone"></i> +57 3164057198</span>
+                <span class="flex items-center gap-1"><i class="fa-solid fa-envelope"></i>
+                    miguel.martinezba@hotmail.com</span>
+                <a href="https://www.linkedin.com/in/ui4054/"
+                    class="flex items-center gap-1 hover:text-blue-600 transition"><i class="fa-brands fa-linkedin"></i>
+                    LinkedIn</a>
+                <a href="https://github.com/ui4054" class="flex items-center gap-1 hover:text-gray-900 transition"><i
+                        class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://www.credly.com/users/ui4054"
+                    class="flex items-center gap-1 hover:text-yellow-600 transition"><i
+                        class="fa-solid fa-certificate"></i>
+                    Credly</a>
+            </div>
+        </div>
+        <div class="flex flex-col items-center bg-white p-2 rounded-xl border border-gray-200 shadow-sm">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://www.linkedin.com/in/ui4054/&color=1f2937&bgcolor=ffffff"
+                alt="QR Code" class="w-[4.5rem] h-[4.5rem] rounded-lg">
+            <span class="text-[9px] text-gray-500 mt-1 font-medium">LinkedIn</span>
+        </div>
+    </header>
+
+    <!-- Main Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 print:grid-cols-12 gap-5">
+
+        <!-- LEFT COLUMN (4 cols) -->
+        <div class="lg:col-span-4 print:col-span-4 space-y-4 print:space-y-3">
+
+            <!-- Profile -->
+            <div class="bento-card">
+                <h3 class="text-base font-bold text-blue-600 mb-2 flex items-center gap-2"><i
+                        class="fa-solid fa-user-astronaut"></i> Professional Profile</h3>
+                <p class="text-gray-600 text-xs leading-relaxed">
+                    Solutions architect and research professor at the convergence of <strong>Quantum Computing and
+                        Artificial Intelligence (RAG)</strong>. I combine the implementation of hybrid optimization
+                    models in the real sector with active leadership in STEM education and social impact, proving
+                    that engineering and frontier technologies are accessible to transform communities and SMEs.
+                </p>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="bento-card">
+                <h3 class="text-base font-bold text-purple-600 mb-3 flex items-center gap-2"><i
+                        class="fa-solid fa-microchip"></i> Tech Stack</h3>
+
+                <div class="space-y-3">
+                    <div>
+                        <div class="flex justify-between text-[10px] font-semibold text-gray-700 mb-1"><span>Quantum
+                                Modeling (QAOA, VQE)</span><span class="text-purple-600">Expert</span></div>
+                        <div class="w-full bg-gray-200 rounded-full h-1">
+                            <div class="bg-gradient-to-r from-blue-500 to-purple-500 h-1 rounded-full"
+                                style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-[10px] font-semibold text-gray-700 mb-1"><span>AI &
+                                Quantum (Qiskit, Gemini, PennyLane)</span><span class="text-blue-600">Advanced</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1">
+                            <div class="bg-gradient-to-r from-blue-500 to-purple-500 h-1 rounded-full"
+                                style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-[10px] font-semibold text-gray-700 mb-1"><span>Data
+                                Engineering (DuckDB, Pandas, SQL)</span><span class="text-blue-600">Advanced</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1">
+                            <div class="bg-gradient-to-r from-blue-500 to-purple-500 h-1 rounded-full"
+                                style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-[10px] font-semibold text-gray-700 mb-1"><span>Dev &
+                                Research (Python, LaTeX, Streamlit)</span><span class="text-purple-600">Advanced</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1">
+                            <div class="bg-gradient-to-r from-blue-500 to-purple-500 h-1 rounded-full"
+                                style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3 flex flex-wrap items-center gap-1.5">
+                    <span
+                        class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] rounded-md border border-gray-300 whitespace-nowrap">Linux</span>
+                    <span
+                        class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] rounded-md border border-gray-300 whitespace-nowrap">AWS</span>
+                    <span
+                        class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] rounded-md border border-gray-300 whitespace-nowrap">Qiskit</span>
+                    <span
+                        class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] rounded-md border border-gray-300 whitespace-nowrap">IBM</span>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="bento-card">
+                <h3 class="text-base font-bold text-green-600 mb-3 flex items-center gap-2"><i
+                        class="fa-solid fa-graduation-cap"></i> Education</h3>
+                <ul class="space-y-2 text-xs">
+                    <li>
+                        <p class="font-semibold text-gray-800">M.S. in STEM Education</p>
+                        <p class="text-gray-500 text-[10px]">Santo Tomás University<span
+                                class="text-[10px] text-gray-500 font-normal ml-1"> (In progress)</span></p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-gray-800">Specialist in Data Analytics</p>
+                        <p class="text-gray-500 text-[10px]">CUN</p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-gray-800">Bachelor of Education, Mathematics Major</p>
+                        <p class="text-gray-500 text-[10px]">Santo Tomás University<span
+                                class="text-[10px] text-green-600 font-bold ml-1"> Cum Laude</span></p>
+                    </li>
+                    <li>
+                        <p class="font-semibold text-gray-800">B.S. in Systems Engineering</p>
+                        <p class="text-gray-500 text-[10px]">CUN</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN (8 cols) -->
+        <div class="lg:col-span-8 print:col-span-8 space-y-4 print:space-y-3">
+
+            <!-- Technical Experience -->
+            <div class="bento-card relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-32 h-32 bg-blue-100 opacity-50 rounded-full blur-3xl -mr-10 -mt-10">
+                </div>
+                <h3 class="text-lg font-bold text-blue-600 mb-4 flex items-center gap-2"><i
+                        class="fa-solid fa-briefcase"></i> Technical Experience</h3>
+
+                <div class="border-l-2 border-gray-200 pl-4 space-y-4 relative">
+                    <!-- Item 1 -->
+                    <div class="relative">
+                        <div
+                            class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[1.35rem] top-1 border-2 border-white">
+                        </div>
+                        <h4 class="text-base font-bold text-gray-900">Quantum Software Engineer - Freelancer</h4>
+                        <p class="text-xs text-blue-600 mb-1">KentryOps - Australia <span class="text-gray-500">| Dic
+                                2025 -
+                                Present</span></p>
+                        <ul class="list-disc list-inside text-xs text-gray-600 space-y-0.5">
+                            <li><strong class="text-gray-800">Technical Leadership:</strong> Hybrid optimization
+                                architectures (QAOA/VQE) for SMEs.</li>
+                            <li><strong class="text-gray-800">International Milestone:</strong> Presented at Quantum
+                                Australia 2026: <em>"Building Trust in Quantum Optimization"</em> as an <strong>IBM
+                                    Qiskit Advocate</strong>.</li>
+                            <li><strong class="text-gray-800">Impact:</strong> Democratization of frontier technologies
+                                and business consulting.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative">
+                        <div
+                            class="absolute w-3 h-3 bg-gray-400 rounded-full -left-[1.35rem] top-1 border-2 border-white">
+                        </div>
+                        <h4 class="text-base font-bold text-gray-900">Research Professor</h4>
+                        <p class="text-xs text-purple-600 mb-1">UNIMINUTO - Colombia <span class="text-gray-500">| March
+                                -
+                                May
+                                2026</span></p>
+                        <ul class="list-disc list-inside text-xs text-gray-600 space-y-0.5">
+                            <li>Research project <strong>"Sociodemographic, Structural, and Psychometric Factors of
+                                    Formalization: A Multivariate Analysis in the Shopkeeper Sector of Northern
+                                    Tolima"</strong> using Logit models.</li>
+                            <li>Development of an <strong>Agentic RAG</strong> system for statistical auditing and
+                                technical interpretation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-4">
+                <!-- Proy 1 -->
+
+                <!-- Proy 2 -->
+                <div class="bento-card group relative">
+                    <a href="https://github.com/ui4054/entrenadorAER" target="_blank" class="absolute inset-0 z-10"></a>
+                    <h4
+                        class="text-sm font-bold text-gray-900 mb-1 group-hover:text-purple-600 transition flex items-center justify-between">
+                        EntrenadorAER <i class="fa-brands fa-github text-gray-400 group-hover:text-purple-600"></i>
+                    </h4>
+                    <p class="text-[10px] text-gray-500 mb-2">Qiskit 2.x / Sampler / Estimator</p>
+                    <p class="text-xs text-gray-600">Open-source quantum pedagogical tool teaching IBM Qiskit primitives
+                        from concept to practical application.</p>
+                </div>
+                <!-- Proy 3 -->
+
+                <!-- Proy 4 -->
+                <div class="bento-card group relative">
+                    <a href="https://github.com/ui4054/qamp-2025_18_IBM_Qiskit" target="_blank"
+                        class="absolute inset-0 z-10"></a>
+                    <h4
+                        class="text-sm font-bold text-gray-900 mb-1 group-hover:text-purple-600 transition flex items-center justify-between">
+                        IBM QAMP <i class="fa-brands fa-github text-gray-400 group-hover:text-purple-600"></i>
+                    </h4>
+                    <p class="text-[10px] text-gray-500 mb-2">Qiskit / Education / Multilingual</p>
+                    <p class="text-[11px] leading-tight text-gray-600">Inclusive quantum computing curriculum from 6th
+                        grade to professionals. Includes hands-on labs and multilingual support.</p>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Achievements & Social Impact -->
+            <div class="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-4">
+                <!-- Achievements & Certifications -->
+                <div class="bento-card h-full">
+                    <h3 class="text-base font-bold text-yellow-600 mb-3 flex items-center gap-2"><i
+                            class="fa-solid fa-medal"></i> Achievements & Certifications</h3>
+                    <div class="space-y-2 text-[11px] text-gray-700">
+
+                        <div class="flex items-start gap-1.5"><i class="fa-solid fa-check text-green-500 mt-0.5"></i>
+                            <span><strong>IBM Quantum:</strong> Variational Eigensolvers Algorithms Design</span>
+                        </div>
+
+                        <div class="flex items-start gap-1.5"><i class="fa-solid fa-check text-green-500 mt-0.5"></i>
+                            <span><strong>IBM Cybersecurity Analyst:</strong> Professional Certificate - SIEM, SOC,
+                                Incident Response</span>
+                        </div>
+                        <div class="flex items-start gap-1.5"><i class="fa-solid fa-check text-green-500 mt-0.5"></i>
+                            <span><strong>QWorld Global Graduate:</strong> QBronze, QNickel, QCobalt & QML
+                                Specialist</span>
+                        </div>
+
+                        <div class="flex items-start gap-1.5"><i class="fa-solid fa-check text-green-500 mt-0.5"></i>
+                            <span><strong>English EF SET:</strong> B2 Upper Intermediate</span>
+                        </div>
+                        <div class="flex items-start gap-1.5"><i class="fa-solid fa-check text-green-500 mt-0.5"></i>
+                            <span><strong>Speaker:</strong> Quantum Software Webinar (Peru)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Impact -->
+                <div class="bento-card h-full">
+                    <h3 class="text-base font-bold text-red-500 mb-2 flex items-center gap-2"><i
+                            class="fa-solid fa-heart-pulse"></i> Social Impact</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed mb-2">
+                        <strong class="text-gray-800">Colombian Red Cross:</strong> Health Director (2012) and Regional
+                        Coordinator for more than a decade.
+                    </p>
+                    <p class="text-xs text-gray-600 leading-relaxed mb-2">
+                        <strong class="text-gray-800">Colombian Civil Defense:</strong> Telematics projects and disaster
+                        response consultant (2014-2016).
+                    </p>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        <strong class="text-gray-800">Quantum Hub Peru:</strong> Mentor consolidating the quantum STEM
+                        ecosystem in LATAM.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- References -->
+    <div class="bento-card mt-5 mb-2">
+        <h3 class="text-sm font-bold text-gray-800 mb-2 text-center flex justify-center items-center gap-2"><i
+                class="fa-solid fa-address-book"></i> Professional References</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 print:grid-cols-3 gap-4 text-center">
+            <div>
+                <p class="font-bold text-gray-900 text-[11px]">Prof. Noor Ul Ain Faisal</p>
+                <p class="text-[10px] text-blue-600">Researcher - Open Quantum Institute</p>
+                <p class="text-[9px] text-gray-500 mt-0.5"><a href="https://www.linkedin.com/in/noorulain-faisal/"
+                        target="_blank" class="inline-flex items-center gap-1 hover:text-blue-600 transition"><i
+                            class="fa-brands fa-linkedin"></i> LinkedIn Profile</a></p>
+            </div>
+            <div>
+                <p class="font-bold text-gray-900 text-[11px]">Ing. Carlos Araque</p>
+                <p class="text-[10px] text-blue-600">Senior Databricks Engineer | Lead Architect, KentryOps Australia
+                </p>
+                <p class="text-[9px] text-gray-500 mt-0.5"><a href="https://www.linkedin.com/in/carlosaraquel/"
+                        target="_blank" class="inline-flex items-center gap-1 hover:text-blue-600 transition"><i
+                            class="fa-brands fa-linkedin"></i> LinkedIn Profile</a></p>
+            </div>
+            <div>
+                <p class="font-bold text-gray-900 text-[11px]">Prof. Freddy Herrera Cueva</p>
+                <p class="text-[10px] text-blue-600">Staff Research Associate - Center for Quantum Networks</p>
+                <p class="text-[9px] text-gray-500 mt-0.5"><a href="https://www.linkedin.com/in/fredyhc2001/"
+                        target="_blank" class="inline-flex items-center gap-1 hover:text-blue-600 transition"><i
+                            class="fa-brands fa-linkedin"></i> LinkedIn Profile</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-4 text-center pb-2">
+        <p class="text-[12px] text-gray-500 italic mb-1">"For the LORD giveth wisdom: out of his mouth cometh knowledge
+            and understanding" - Proverbs 2:6</p>
+        <p class="text-[12px] text-gray-500 mb-1">May 2026 Edition</p>
+    </footer>
+
+</body>
+
+</html>
